@@ -1,6 +1,7 @@
 from sqlalchemy import Column, Float, ForeignKey, Integer, String, Date
-from sqlalchemy.orm import relationship
-from database.database import Base
+
+# from sqlalchemy.orm import relationship
+from ...database.database import Base
 
 
 class ManualInvoice(Base):
@@ -11,4 +12,4 @@ class ManualInvoice(Base):
     description = Column(String)
     invoice_amount = Column(Float)
     owner_id = Column(Integer, ForeignKey("users.id"))
-    owner = relationship("User", back_populates="manual_invoices")
+    # owner = relationship("User", back_populates="manual_invoices")
