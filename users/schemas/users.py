@@ -1,6 +1,6 @@
 from typing import List
 from pydantic import BaseModel, EmailStr
-from manual_invoices.schemas import ManualInvoice
+from ...manual_invoices.schemas.manual_invoices import ManualInvoice
 
 
 class UserBase(BaseModel):
